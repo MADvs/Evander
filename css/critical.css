@@ -1,0 +1,39 @@
+@font-face {
+    font-family: Adventure;
+    src: url(/fonts/Stepalange-x3BLm.otf);
+}
+
+@font-face {
+    font-family: Pixel;
+    src: url(/fonts/PixeloidSans-mLxMm.ttf);
+}
+
+* {margin: 0; padding: 0;}
+
+body {
+    background-image: url(/images/backgrounds/grass.webp);
+}
+
+.gui {
+    height: 90dvh;
+    border: 1px solid red;
+    margin-top: 5dvh;
+}
+
+.box {
+    background-color: #2f2f2f;
+    text-align: center;
+    color: white;
+    margin: 20px;
+    padding: 30px;
+}
+
+.box h1 {
+    font-family: Adventure;
+    margin: 1dvh 0;
+}
+
+.box p {
+    font-family: Pixel;
+    margin: 1dvh 0;
+}
