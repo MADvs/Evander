@@ -1,0 +1,223 @@
+/* -- FONTS -- */
+@font-face {
+    font-family: Adventure;
+    src: url(/fonts/Stepalange-x3BLm.otf);
+}
+
+@font-face {
+    font-family: Pixel;
+    src: url(/fonts/PixeloidSans-mLxMm.ttf);
+}
+
+/* -- VARIABLES -- */
+:root {
+    --red: #f6655d;
+    --lightred: #ff6076;
+    --orange: #EE831C;
+    --lightorange: #FFE1B2;
+    --yellow: #FFEC3D;
+    --lightyellow: #fffb84;
+    --green: #00E777;
+    --lightgreen: #82ff8a;
+    --blue: #3D8FFE;
+    --lightblue: #71faff;
+    --purple: #AA47BC;
+    --lightpurple: #E2BFE9;
+    --pink: #EA62FF;
+    --lightpink: #E2BFE9;
+    --teal: #00ADC3;
+    --lightteal: #B2EDF5;
+    --gray: #1f1f1f;
+}
+.r {color: var(--red);}
+.o {color: var(--orange);}
+.y {color: var(--yellow);}
+.g {color: var(--green);}
+.b {color: var(--blue);}
+.e {color: var(--purple);}
+.k {color: var(--pink);}
+.t {color: var(--teal);}
+.lr {color: var(--lightred);}
+.lo {color: var(--lightorange);}
+.ly {color: var(--lightyellow);}
+.lg {color: var(--lightgreen);}
+.lb {color: var(--lightblue);}
+.le {color: var(--lightpurple);}
+.lk {color: var(--lightpink);}
+.lt {color: var(--lightteal);}
+.hidden {display: none;}
+* {margin: 0; padding: 0;}
+
+/* ANIMATIONS */
+@keyframes glowBg {
+    0% {color: var(--green);}
+    50% {color: var(--blue);}
+    100% {color: var(--green);}
+}
+
+@keyframes bob {
+    0% {transform: translate(0, 0);}
+    50% {transform: translate(0, 3px);}
+    100% {transform: translate(0, 0);}
+}
+
+@keyframes fadeUp {
+    0% {opacity: 0%; transform: translate(0, 20px);}
+    100% {opacity: 100%; transform: translate(0, 0);}
+}
+
+@keyframes buttonHoverGray {
+    0% {}
+    100% {background-color: #4f4f4f;}
+}
+
+@keyframes buttonHoverRed {
+    0% {}
+    100% {background-color: var(--red);}
+}
+
+@keyframes buttonHoverGreen {
+    0% {}
+    100% {background-color: var(--green);}
+}
+
+.glowbg {animation: glowBg 5s ease-in-out infinite;}
+
+/* -- BODY -- */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url(/images/backgrounds/grass.webp);
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        display: none
+    }
+}
+
+.gui {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -- BASIC BOX TEMPLATE -- */
+.box {
+    background-color: rgb(47, 47, 47, 0.8);
+    text-align: center;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    animation: fadeUp 1s ease, bob 5s ease-in-out infinite;
+    animation-delay: 0s, 1s;
+}
+
+.box h1 {
+    font-family: Adventure;
+    margin: 2dvh 0;
+    font-size: 2.17499rem;
+    background: #1f1f1f;
+    border-radius: 7px;
+    padding: 10px 3px 5px 3px;
+}
+
+.box h2 {
+    font-family: Adventure;
+    font-weight: 100;
+}
+
+.box p, .box a {
+    font-family: Pixel;
+    font-size: 1rem;
+}
+
+/* -- BUTTON TEMPLATES -- */
+button {
+    margin: 3dvh 0;
+    font-family: Pixel;
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 1.8em;
+    padding: .3em 1em;
+}
+
+button:hover {
+    animation: buttonHoverGray 0.2s forwards;
+}
+
+#yesButton {background-color: darkgreen;}
+#noButton {background-color: darkred;}
+#yesButton:hover {animation: buttonHoverGreen 0.2s forwards;}
+#noButton:hover {animation: buttonHoverRed 0.2s forwards;}
+
+/* -- CHARACTER FORM -- */
+.input-group {
+    margin: 2dvh;
+}
+
+.input-group h2 {
+    font-family: Adventure;
+    font-weight: 100;
+    font-size: 1.7rem;
+}
+
+input[type="text"] {
+    background-color: #1f1f1f;
+    color: white;
+    font-size: 1.19rem;
+    width: 100%;
+    font-family: Pixel;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid white;
+}
+
+.radio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    font-family: Pixel;
+    font-size: 0.994499891996383611rem;
+}
+
+.radio-group {
+    margin: 1dvh;
+}
+
+input[type="radio"] {
+    transform: scale(1.75);
+    margin-right: 2dvh
+}
+
+#errorText {margin: 0; padding: 0;}
+
+#dwarfButton, #abjButton {accent-color: var(--yellow);}
+#elfButton, #divButton {accent-color: var(--blue);}
+#humanButton, #evoButton {accent-color: var(--red);}
+#constructButton, #traButton {accent-color: var(--green);}
+
+/* -- CONFIRM TABLE -- */
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-family: Pixel;
+}
+
+th, td {padding: 1dvh;}
+
+th {
+    text-align: left;
+    font-weight: 100;
+}
+
+td {
+    text-align: right;
+}

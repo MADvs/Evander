@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Evander: A Thousand Trials | Create Your Character</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="critical.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="gui">
+            <div class="box" id="creatorBox">
+                <h1 class="glowbg">CREATE YOUR CHARACTER</h1>
+                <p class="r" id="errorText"></p>
+                <div class="character-form">
+                    <div class="input-group">
+                        <label for="nameBox"><h2>Choose a name:</h2></label>
+                        <input type="text" id="nameBox" aria-label="Input character's name:">
+                    </div>
+                    <div class="input-group">
+                        <h2>Choose a race:</h2>
+                        <div class="radio-container">
+                            <div class="radio-group">
+                                <input type="radio" name="raceSelect" id="humanButton" value="human" aria-label="Human">
+                                <label for="humanButton">Human</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="raceSelect" id="elfButton" value="elf" aria-label="Elf">
+                                <label for="alienButton">Elf</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="raceSelect" id="dwarfButton" value="dwarf" aria-label="Dwarf">
+                                <label for="droidButton">Dwarf</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="raceSelect" id="constructButton" value="construct" aria-label="Construct">
+                                <label for="constructButton">Construct</label>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="input-group">
+                        <h2>Choose a school:</h2>
+                        <div class="radio-container">
+                            <div class="radio-group">
+                                <input type="radio" name="schoolSelect" id="abjButton" value="human" aria-label="Abjuration">
+                                <label for="guardianButton">Abjuration</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="schoolSelect" id="divButton" value="alien" aria-label="Divination">
+                                <label for="scholarButton">Divination</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="schoolSelect" id="evoButton" value="droid" aria-label="Evocation">
+                                <label for="pilotButton">Evocation</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" name="schoolSelect" id="traButton" value="droid" aria-label="Transmutation">
+                                <label for="shamanButton">Transmutation</label>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="button-box">
+                        <button id="charSubmitButton" onclick="SubmitCharacter()">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden box" id="confirmBox">
+                <h1 class="glowbg">Is this acceptable?</h1>
+                <div class="table-container">
+                  <h2 id="myName">Name</h2>
+                <table>
+                  <tr>
+                    <th><span id="mySchool">School</span></th>
+                    <td><span id="myRace">Race</span></td>
+                  </tr>
+                  <tr class="ly">
+                    <th>Wisdom:</th>
+                    <td><span id="myWis">2</span></td>
+                  </tr>
+                  <tr class="lb">
+                    <th>Intellect:</th>
+                    <td><span id="myInt">2</span></td>
+                  </tr>
+                  <tr class="lr">
+                    <th>Charisma:</th>
+                    <td><span id="myCha">2</span></td>
+                  </tr>
+                  <tr class="lg">
+                    <th>Constitution:</th>
+                    <td><span id="myCon">2</span></td>
+                  </tr>
+                  <tr class="ly">
+                    <th>Endurance:</th>
+                    <td><span id="myEp">10</span></td>
+                  </tr>
+                  <tr class="lb">
+                    <th>Mana:</th>
+                    <td><span id="myMp">10</span></td>
+                  </tr>
+                  <tr class="lr">
+                    <th>Attack Bonus:</th>
+                    <td><span id="myAb">2</span></td>
+                  </tr>
+                  <tr class="lg">
+                    <th>Armor Class:</th>
+                    <td><span id="myAc">50</span>%</td>
+                  </tr>
+                </table>
+                </div>
+                <div class="button-box">
+                  <button id="yesButton" onclick="ConfirmCharacter()">Yes</button>
+                  <button id="noButton" onclick="window.location.reload()">No</button>
+                </div>
+              </div>
+        </div>
+        <script src="create.js"></script>
+    </body>
+</html>
