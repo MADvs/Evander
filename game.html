@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Evander: A Thousand Trials | Playing...</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="critical.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="gui">
+            <div id="yourDisplay">
+                <div class="box info-box" id="yourInfoBox">
+                    <p><span id="yourNameText">Name</span></p>
+                    <div class="info-row">
+                        <p class="ly">Endurance: <span id="yourCurrentEPText">10</span> / <span id="yourMaxEPText">10</span></p>
+                        <p class="lb">Mana: <span id="yourCurrentMPText">10</span> / <span id="yourMaxMPText">10</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box" id="logBox">
+                <p id="logText">This is the game log text</p>
+            </div>
+
+            <div id="myDisplay">
+                <div class="box info-box" id="myInfoBox">
+                    <p><span id="myNameText">Name</span> - <span id="myRaceText">Race</span> <span id="mySchoolText">School</span></p>
+                    <div class="info-row">
+                        <p class="ly">Endurance: <span id="myCurrentEPText">10</span> / <span id="myMaxEPText">10</span></p>
+                        <p class="lb">Mana: <span id="myCurrentMPText">10</span> / <span id="myMaxMPText">10</span></p>
+                    </div>
+                </div>
+                <div class="box spell-box" id="mySpellBox">
+                    <div class="slot abj"><h4 id="slot1Text">Healing Light</h4></div>
+                    <div class="slot div"><h4 id="slot2Text">Diving Mind</h4></div>
+                    <div class="slot evo"><h4 id="slot3Text">Fire Ball</h4></div>
+                    <div class="slot tra"><h4 id="slot4Text">Minor Meditation</h4></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="game.js"></script>
+    </body>
+</html>

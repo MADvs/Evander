@@ -81,6 +81,16 @@
     100% {background-color: var(--green);}
 }
 
+@keyframes buttonHoverYellow {
+    0% {}
+    100% {background-color: var(--yellow);}
+}
+
+@keyframes buttonHoverBlue {
+    0% {}
+    100% {background-color: var(--blue);}
+}
+
 .glowbg {animation: glowBg 5s ease-in-out infinite;}
 
 /* -- BODY -- */
@@ -203,7 +213,6 @@ input[type="radio"] {
 #constructButton, #traButton {accent-color: var(--green);}
 
 /* -- CONFIRM TABLE -- */
-
 .table-container {
     display: flex;
     flex-direction: column;
@@ -220,4 +229,38 @@ th {
 
 td {
     text-align: right;
+}
+
+/* -- SPELL BOX -- */
+.spell-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2dvh;
+    font-family: Pixel;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+.slot {
+    background-color: #1f1f1f;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.abj {background-color: rgb(169, 152, 58);}
+.div {background-color: rgb(77, 77, 159);}
+.evo {background-color: rgb(180, 55, 55);}
+.tra {background-color: rgb(44, 125, 44);}
+.abj:hover {animation: buttonHoverYellow 0.5s forwards;}
+.div:hover {animation: buttonHoverBlue 0.5s forwards;}
+.evo:hover {animation: buttonHoverRed 0.5s forwards;}
+.tra:hover {animation: buttonHoverGreen 0.5s forwards;}
+
+#logBox {
+    border: 1px solid white;
 }

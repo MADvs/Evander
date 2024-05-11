@@ -78,9 +78,9 @@ function CalculateStats() {
         user.con++;
     }
 
-    user.ep.max += (user.con + user.level);
+    user.ep.max += (user.con * user.level);
     user.ep.current = user.ep.max;
-    user.mp.max += (user.int + user.level);
+    user.mp.max += (user.int * user.level);
     user.mp.current = user.mp.max;
     user.ac += (user.wis + user.level);
     user.ab = (user.level + user.cha);
